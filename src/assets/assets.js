@@ -2,11 +2,15 @@ import cart_icon from "./cart_icon.png";
 import profile_icon from "./profile_icon.png";
 import menu_icon from "./menu_icon.png";
 import close_icon from "./close_icon.png";
-import hero_img from "./hero_img.jpg";
+import hero_img1 from "./hero_img1.jpg";
 import exchange_icon from "./exchange_icon.png";
 import return_icon from "./return_icon.png";
 import support_icon from "./support_icon.png";
 import email_icon from "./email_icon.png";
+import about_img1 from "./about_img1.png";
+import about_img2 from "./about_img2.png";
+import delete_icon from "./delete_icon.png";
+import emptycart_img from "./emptycart_img.png";
 import p_img1_1 from "./p_img1_1.jpg";
 import p_img1_2 from "./p_img1_2.jpg";
 import p_img2_2 from "./p_img2_2.jpg";
@@ -44,11 +48,15 @@ export const assets = {
   profile_icon,
   menu_icon,
   close_icon,
-  hero_img,
+  hero_img1,
   exchange_icon,
   support_icon,
   return_icon,
   email_icon,
+  about_img1,
+  about_img2,
+  delete_icon,
+  emptycart_img,
 };
 
 const products = [
@@ -124,12 +132,12 @@ const products = [
 
   {
     _id: 6,
-    name: "Women Stylish Track Pant",
+    name: "Men Stylish Chinos",
     description:
       "Comfortable Breathable Sweat-wicking Joggers Training Gym Running Fitness Casual Stretch Elastic Track Pant For Men",
     price: 50,
     image: [p_img1_6, p_img2_6, p_img3_6, p_img4_6],
-    category: "Women",
+    category: "Men",
     subCategory: "Bottomwear",
     sizes: ["S", "M"],
     date: new Date(),

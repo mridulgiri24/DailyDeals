@@ -18,14 +18,17 @@ export default function Featured() {
   }, [bestSellers]);
 
   return (
-    <>
+    <div className="px-6 lg:px-14">
       {/* Labels */}
-      <div className="flex justify-around items-center mt-32 mb-10 bg-slate-200 p-2">
+      <div
+        className="flex justify-around items-center mt-20 mb-10 
+      border-b rounded p-2"
+      >
         <h3
           className={`text-sm sm:text-lg cursor-pointer ${
             bestSellers
-              ? "text-gray-500 font-semibold"
-              : "font-bold text-gray-900"
+              ? "text-[#025048] font-medium"
+              : "font-semibold text-[#025048]"
           }`}
           onClick={() => setBestSellers(false)}
         >
@@ -34,8 +37,8 @@ export default function Featured() {
         <h3
           className={`text-sm sm:text-lg cursor-pointer ${
             bestSellers
-              ? "font-bold text-gray-900"
-              : "text-gray-500 font-semibold"
+              ? "font-semibold text-[#025048]"
+              : "text-[#025048] font-medium"
           }`}
           onClick={() => setBestSellers(true)}
         >
@@ -53,6 +56,6 @@ export default function Featured() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

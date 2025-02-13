@@ -75,28 +75,31 @@ export default function Collection() {
 
   return (
     <>
-      <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 mt-20">
+      <div className="flex flex-col lg:flex-row gap-1 px-6 lg:px-14 lg:gap-10 mt-20">
         {/* filter options */}
         <div className="min-w-60">
           <p
             onClick={() => setShowFilter(!showFilter)}
-            className="mb-2 text-xl flex items-center cursor-pointer gap-2"
+            className="mb-2 text-xl flex items-center cursor-pointer
+             text-[#025048] gap-2 playfair-display"
           >
             FILTERS
             {showFilter ? (
-              <i className="fa-solid fa-angle-down sm:hidden"></i>
+              <i className="fa-solid fa-angle-down lg:hidden"></i>
             ) : (
-              <i className="fa-solid fa-angle-right sm:hidden"></i>
+              <i className="fa-solid fa-angle-right lg:hidden"></i>
             )}
           </p>
           {/* category filter */}
           <div
-            className={`border border-gray-300 pl-5 py-3 mt-6 sm:block ${
+            className={`border border-gray-300 pl-5 py-3 mt-6 lg:block ${
               showFilter ? "" : "hidden"
             }`}
           >
-            <h4 className="mb-3 font-medium">CATEGORIES</h4>
-            <div className="flex flex-col gap-2 text-gray-700">
+            <h4 className="mb-3 font-medium playfair-display text-[#025048]">
+              CATEGORIES
+            </h4>
+            <div className="flex flex-col gap-2 text-[#025048]">
               <p className="flex gap-2">
                 <input
                   className="w-3 cursor-pointer"
@@ -138,12 +141,14 @@ export default function Collection() {
 
           {/* Type filter */}
           <div
-            className={`border border-gray-300 pl-5 py-3 mt-6 sm:block ${
+            className={`border border-gray-300 pl-5 py-3 mt-6 lg:block ${
               showFilter ? "" : "hidden"
             }`}
           >
-            <h4 className="mb-3 font-medium">TYPE</h4>
-            <div className="flex flex-col gap-2 text-gray-700">
+            <h4 className="mb-3 font-medium playfair-display text-[#025048]">
+              TYPE
+            </h4>
+            <div className="flex flex-col gap-2 text-[#025048]">
               <p className="flex gap-2">
                 <input
                   className="w-3 cursor-pointer"
@@ -186,8 +191,8 @@ export default function Collection() {
           {/* product sort */}
           <div>
             <select
-              className={`border border-gray-300 mt-6 outline-none
-              px-2 h-10 w-full sm:block ${showFilter ? "" : "hidden"}`}
+              className={`border border-gray-300 mt-6 text-[#025048] outline-none
+              px-2 h-10 w-full lg:block ${showFilter ? "" : "hidden"}`}
               onChange={(e) => setSortType(e.target.value)}
             >
               <option value="relavent">Sort by: Relavent</option>
@@ -202,11 +207,11 @@ export default function Collection() {
           {/* product search */}
           <div
             className="flex justify-between rounded-full items-center
-          w-full mt-5 sm:mt-0 border border-gray-600"
+          w-full mt-5 lg:mt-0 border border-gray-600"
           >
             <input
               className="h-9 w-[90%] rounded-full ml-5 outline-none
-              text-gray-700"
+              text-[#025048]"
               placeholder="Search"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -233,7 +238,6 @@ export default function Collection() {
           </div>
         </div>
       </div>
-      <Contact />
     </>
   );
 }

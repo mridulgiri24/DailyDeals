@@ -1,7 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
 import OurPolicy from "../components/OurPolicy";
-import Contact from "../components/Contact";
 import Featured from "../components/Featured";
 
 export default function Home() {
@@ -10,7 +9,6 @@ export default function Home() {
       <Hero />
       <Featured />
       <OurPolicy />
-      <Contact />
     </>
   );
 }

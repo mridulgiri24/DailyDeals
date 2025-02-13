@@ -1,15 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  font-family: Outfit;
+  font-family: "Work Sans", serif;
 }
 
-.prata-regular {
-  font-family: "Prata", serif;
+.playfair-display {
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-style: normal;
 }

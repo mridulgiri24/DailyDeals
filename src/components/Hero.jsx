@@ -1,32 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import { assets } from "../assets/assets";
+import { PopupContext } from "../context/PopupContext";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col sm:flex-row justify-center items-center mt-20 sm:mt-32">
-      {/* hero left side */}
-      <div className="text-[#414141] w-full sm:w-1/2 flex flex-col gap-6 pb-5 sm:p-0">
+    <div
+      className="bg-[#025048] flex flex-col text-center lg:text-left lg:flex-row 
+    w-full px-7 lg:pl-28 text-white"
+    >
+      <div className="flex flex-col pt-14 lg:pt-28 lg:w-1/2">
         <div>
-          <h1 className="text-5xl font-semibold pb-5 prata-regular">
-            Fall - Winter Collections
-          </h1>
-          <p>
-            A specialist label creating luxury essentials. Ethically crafted
-            with an unwavering commitment to exceptional quality.
+          <h1 className="pb-5 text-base">WELCOME TO DAILYDEALS</h1>
+          <p className="text-4xl lg:text-6xl playfair-display">
+            Trendy, timeless, and tailored for you—shop fashion that fits your
+            style, your vibe, and your life.
           </p>
         </div>
-        <div>
+        <div className="my-5">
           <button
-            className="border-2 border-gray-700 text-gray-900 rounded-sm font-semibold
-          py-2 px-8 hover:bg-gray-700 hover:text-white"
+            className="border border-white text-white
+          py-2 px-8 hover:bg-white hover:text-[#025048]"
           >
             SHOP NOW
           </button>
         </div>
       </div>
-
-      {/* hero right side */}
-      <img className="w-full sm:w-1/2" src={assets.hero_img} />
+      <img className="w-full lg:w-[50%] py-5 lg:p-10" src={assets.hero_img1} />
     </div>
   );
 }

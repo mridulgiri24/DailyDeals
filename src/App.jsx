@@ -12,10 +12,6 @@ import About from "./pages/About";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
-import PlaceOrder from "./pages/PlaceOrder";
-import Orders from "./pages/Orders";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,16 +21,13 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="product/:productId" element={<Product />} />
       <Route path="cart" element={<Cart />} />
-      <Route path="login" element={<Login />} />
-      <Route path="place-order" element={<PlaceOrder />} />
-      <Route path="orders" element={<Orders />} />
+      {/* <Route path="login" element={<Login />} /> */}
     </Route>
   )
 );
 export default function App() {
   return (
-    <div className="px-2 sm:px-[4vw] md:px-[6vw] lg:px-[8vw]">
-      <ToastContainer stacked />
+    <div>
       <RouterProvider router={router} />
     </div>
   );
