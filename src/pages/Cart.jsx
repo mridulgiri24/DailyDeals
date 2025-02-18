@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
+import { PopupContext } from "../context/PopupContext";
+import Success from "../components/Success";
 
 export default function Cart() {
   const { cartItems, products, currency, deliveryFee, updateQuantity } =
@@ -9,6 +11,7 @@ export default function Cart() {
   const [cartData, setCartData] = useState([]);
   const [subTotal, setSubTotal] = useState(0);
   const [total, setTotal] = useState(0);
+  const { openPopup } = useContext(PopupContext);
 
   const getCartItems = () => {
     const tempData = [];
@@ -130,6 +133,7 @@ export default function Cart() {
               <Link
                 className="border mx-5 my-7 text-center border-[#025048] text-[#025048] 
                       py-5 px-8 hover:bg-[#025048] hover:text-white"
+                onClick={() => openPopup(<Success />)}
               >
                 PROCEED TO CHECKOUT
               </Link>

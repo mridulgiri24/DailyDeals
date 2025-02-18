@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export const PopupContext = createContext();
 
@@ -13,6 +13,7 @@ const PopupContextProvider = (props) => {
 
   const closePopup = () => {
     setPopupOpen(false);
+    setPopupContent("");
   };
 
   const value = {

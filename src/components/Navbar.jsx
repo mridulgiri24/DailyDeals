@@ -1,6 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { assets } from "../assets/assets";
 import { ShopContext } from "../context/ShopContext";
 import { PopupContext } from "../context/PopupContext";
 import Contact from "./Contact";
